@@ -13,6 +13,8 @@
 		691BD0222731F5D20025C5DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 691BD0202731F5D20025C5DC /* Main.storyboard */; };
 		691BD0242731F5D20025C5DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 691BD0232731F5D20025C5DC /* Assets.xcassets */; };
 		691BD0272731F5D20025C5DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 691BD0252731F5D20025C5DC /* LaunchScreen.storyboard */; };
+		691BD03027321B830025C5DC /* dark_background.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 691BD02E27321B830025C5DC /* dark_background.pdf */; };
+		691BD03127321B830025C5DC /* light_background.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 691BD02F27321B830025C5DC /* light_background.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		691BD0232731F5D20025C5DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		691BD0262731F5D20025C5DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		691BD0282731F5D20025C5DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		691BD02E27321B830025C5DC /* dark_background.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = dark_background.pdf; path = ../../../../../../Downloads/dark_background.pdf; sourceTree = "<group>"; };
+		691BD02F27321B830025C5DC /* light_background.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = light_background.pdf; path = ../../../../../../Downloads/light_background.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,41 @@
 		691BD0192731F5D20025C5DC /* WeatherForecast */ = {
 			isa = PBXGroup;
 			children = (
+				691BD03427321BC80025C5DC /* Controller */,
+				691BD03327321BBD0025C5DC /* Model */,
+				691BD03227321BA50025C5DC /* View */,
 				691BD01A2731F5D20025C5DC /* AppDelegate.swift */,
 				691BD01C2731F5D20025C5DC /* SceneDelegate.swift */,
-				691BD01E2731F5D20025C5DC /* ViewController.swift */,
-				691BD0202731F5D20025C5DC /* Main.storyboard */,
 				691BD0232731F5D20025C5DC /* Assets.xcassets */,
 				691BD0252731F5D20025C5DC /* LaunchScreen.storyboard */,
 				691BD0282731F5D20025C5DC /* Info.plist */,
+				691BD02E27321B830025C5DC /* dark_background.pdf */,
+				691BD02F27321B830025C5DC /* light_background.pdf */,
 			);
 			path = WeatherForecast;
+			sourceTree = "<group>";
+		};
+		691BD03227321BA50025C5DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				691BD0202731F5D20025C5DC /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		691BD03327321BBD0025C5DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		691BD03427321BC80025C5DC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				691BD01E2731F5D20025C5DC /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +155,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				691BD03127321B830025C5DC /* light_background.pdf in Resources */,
+				691BD03027321B830025C5DC /* dark_background.pdf in Resources */,
 				691BD0272731F5D20025C5DC /* LaunchScreen.storyboard in Resources */,
 				691BD0242731F5D20025C5DC /* Assets.xcassets in Resources */,
 				691BD0222731F5D20025C5DC /* Main.storyboard in Resources */,

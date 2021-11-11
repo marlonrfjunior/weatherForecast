@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import CoreLocation
 
 class WeatherViewController : UIViewController {
-
+    
     @IBOutlet weak var temperarureCBurtton: UIButton!
     @IBOutlet weak var temperatureFButton: UIButton!
     @IBOutlet weak var temperatureKButton: UIButton!
@@ -22,11 +23,18 @@ class WeatherViewController : UIViewController {
     var fareheintValue : String?
     var kelvinValue : String?
     var weatherManager = WeatherManager();
+    let locationManager = CLLocationManager()
     
-override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
-    weatherManager.delegate = self
-    searchTextField.delegate = self
+        weatherManager.delegate = self
+        searchTextField.delegate = self
+        locationManager.delegate = self
+        
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        
+        
     }
 }
 
@@ -42,7 +50,7 @@ extension WeatherViewController : UITextFieldDelegate {
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let city = searchTextField.text{
-        weatherManager.fetchWeather(cityName:city)
+            weatherManager.fetchWeather(cityName:city)
         }
         searchTextField.text = ""
     }
@@ -77,7 +85,7 @@ extension WeatherViewController {
         sender.isSelected = true
         temperatureMetric()
     }
-
+    
     
     func temperatureMetric(){
         if temperarureCBurtton.isSelected{
@@ -99,4 +107,19 @@ extension WeatherViewController {
     }
     
     
+}
+
+//MARK: -  CLLocationManagerDelegate
+
+extension WeatherViewController : CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last{
+            weatherManager.fetchWeather(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
 }

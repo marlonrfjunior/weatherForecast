@@ -19,6 +19,7 @@ class WeatherViewController : UIViewController {
     @IBOutlet weak var metricLabel: UILabel!
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var cityLabel: UILabel!
+    
     var celsiusValue : String?
     var fareheintValue : String?
     var kelvinValue : String?
@@ -32,10 +33,11 @@ class WeatherViewController : UIViewController {
         locationManager.delegate = self
         
         locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
+        locationManager.requestLocation()
         
         
     }
+    
 }
 
 //MARK: - UITextFieldDelegate
@@ -86,6 +88,9 @@ extension WeatherViewController {
         temperatureMetric()
     }
     
+    @IBAction func getActualLocation(_ sender: UIButton) {
+        locationManager.requestLocation()
+    }
     
     func temperatureMetric(){
         if temperarureCBurtton.isSelected{
@@ -115,6 +120,7 @@ extension WeatherViewController : CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last{
+            locationManager.stopUpdatingLocation()
             weatherManager.fetchWeather(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         }
     }

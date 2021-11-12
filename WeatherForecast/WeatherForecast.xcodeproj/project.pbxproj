@@ -16,6 +16,8 @@
 		691BD0272731F5D20025C5DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 691BD0252731F5D20025C5DC /* LaunchScreen.storyboard */; };
 		69519E6227384B6C00AF0740 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69519E6127384B6C00AF0740 /* WeatherData.swift */; };
 		69519E642738D36400AF0740 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69519E632738D36400AF0740 /* WeatherModel.swift */; };
+		69C6EF90273E04C600CA8A50 /* light_background.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 69C6EF8F273E04C600CA8A50 /* light_background.pdf */; };
+		69C6EF92273E04E500CA8A50 /* dark_background.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 69C6EF91273E04E500CA8A50 /* dark_background.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		691BD0282731F5D20025C5DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69519E6127384B6C00AF0740 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		69519E632738D36400AF0740 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		69C6EF8F273E04C600CA8A50 /* light_background.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = light_background.pdf; sourceTree = "<group>"; };
+		69C6EF91273E04E500CA8A50 /* dark_background.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = dark_background.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,8 @@
 				691BD0232731F5D20025C5DC /* Assets.xcassets */,
 				691BD0252731F5D20025C5DC /* LaunchScreen.storyboard */,
 				691BD0282731F5D20025C5DC /* Info.plist */,
+				69C6EF8F273E04C600CA8A50 /* light_background.pdf */,
+				69C6EF91273E04E500CA8A50 /* dark_background.pdf */,
 			);
 			path = WeatherForecast;
 			sourceTree = "<group>";
@@ -158,9 +164,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69C6EF92273E04E500CA8A50 /* dark_background.pdf in Resources */,
 				691BD0272731F5D20025C5DC /* LaunchScreen.storyboard in Resources */,
 				691BD0242731F5D20025C5DC /* Assets.xcassets in Resources */,
 				691BD0222731F5D20025C5DC /* Main.storyboard in Resources */,
+				69C6EF90273E04C600CA8A50 /* light_background.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

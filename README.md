@@ -1,6 +1,6 @@
 # Weather Forecast App
 
-In this module, I created a weather forecast application. This application obtains a weather forecast of the country where the user is with the device's GPS or the user can inform the city, in addition to choosing which thermometric scales  they want to view.
+In this module, I created a weather forecast application. This application obtains a weather forecast using the device's GPS or the user can inform the city, in addition to choosing which thermometric scales  they want to view.
 
 I could learn:
 
